@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>student Registration Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+  <body>
+    <div class="register-box">
+      <h1>Register Now</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form id="student" action="api1.php" method="post" autocomplete="off">
+        <label for="firstname">First_name</label>
+        <input type="text" id="firstname" placeholder="" name="first_name" />
+
+        <label for="lastname">Last_name</label>
+        <input type="text" id="lastname" placeholder="" name="last_name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="" name="email" />
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear Form</button>
+
+        <p>
+          By clicking the registerbutton, you agree to be part of our smart
+          education system <br />
+        </p>
+      </form>
+
+      <div id="studentList"></div>
+
+      <script src="script2.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "princesse",
+  "version": "1.0.0",
+  "description": "the eaiest way to reverse a sentence",
+  "main": "prince.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "what",
+    "do",
+    "you",
+    "know",
+    "about",
+    "reversing"
+  ],
+  "author": "Jolie Princesse",
+  "license": "ISC",
+  "dependencies": {
+    "princesse": "^1.0.0"
+  }
+}

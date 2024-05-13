@@ -1,0 +1,89 @@
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+
+.header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: var(--black);
+}
+.header .navbar a:hover {
+  color: var(--main-color);
+}
+.header .navbar:active {
+  background-color: skyblue;
+}
+#menu-btn {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--black);
+  display: none;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about .image {
+  flex: 1 1 41rem;
+}
+
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 41rem;
+  padding: 3rem;
+  background: var(--light-bg);
+}
+.about .content h3 {
+  font-size: 3rem;
+  color: var(--black);
+}
+.about .content p {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  line-height: 2;
+  color: var(--black);
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+    transition: 0.2s linear;
+  }
+  #menu-btn.fa-times {
+    transform: rotate(180deg);
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background-color: var(--white);
+    border-top: var(--border);
+    padding: 2rem;
+    transition: 0.2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .heading-title {
+    font-size: 3rem;
+  }
+}

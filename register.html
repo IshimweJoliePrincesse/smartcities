@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="register-box">
+      <h1>Register Now</h1>
+      <h4>It's free and only takes a minute</h4>
+      <form id="addform" autocomplete="off" action="api.php" method="POST">
+        <label for="names">Names</label>
+        <input type="text" id="names" name="names" />
+        <label>Email</label>
+        <input type="email" id="email" name="email" />
+        <label>Password</label>
+        <input type="password" id="password" name="password" />
+        <button type="submit" id="registerBtn">Register</button>
+        <button type="reset" name="clear form" value="clear form">
+          Clear form
+        </button>
+      </form>
+    </div>
+    <p>
+      By clicking the Register button, you agree to our
+      <a href="terms.html">Terms of use</a> and <a href="#">Privacy Policy</a>
+    </p>
+
+    <h4 style="color: black; background-color: skyblue; font-size: larger">
+      <b>Client Information</b>
+    </h4>
+    <input type="text" id="searchInput" placeholder="Search..." />
+
+    <div id="result"></div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Names</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="paginationControls"></div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("form").submit(function (e) {
+          e.preventDefault();
+          var names = $("#names").val();
+          var email = $("#email").val();
+          var password = $("#password").val();
+          $.ajax({
+            url: "api.php",
+            method: "POST",
+            data: {
+              names: names,
+              email: email,
+              password: password,
+            },
+            success: function (response) {
+              console.log(response);
+              $("form")[0].reset();
+              $(".table tbody").append(
+                `<tr>
+                  <td>${names}</td>
+                  <td>${email}</td>
+                  <td>${password}</td>
+                  <td>
+                    <button class='delete' type='button'>Delete</button>
+                    <button class='edit' type='button'>Edit</button>
+                  </td>
+                </tr>`
+              );
+              updatePaginationControls();
+            },
+          });
+        });
+
+        $("body").on("click", ".delete", function () {
+          var $this = $(this);
+          var $tr = $this.closest("tr");
+          var names = $tr.find("td:eq(0)").text();
+          var email = $tr.find("td:eq(1)").text();
+          var password = $tr.find("td:eq(2)").text();
+          $.ajax({
+            url: "api.php",
+            method: "DELETE",
+            data: {
+              names: names,
+              email: email,
+              password: password,
+            },
+            success: function (response) {
+              $tr.remove();
+              updatePaginationControls();
+            },
+          });
+        });
+
+        $("body").on("click", ".edit", function () {
+          var $this = $(this);
+          var $tr = $this.closest("tr");
+          var names = $tr.find("td:eq(0)").text();
+          var email = $tr.find("td:eq(1)").text();
+          var password = $tr.find("td:eq(2)").text();
+          $tr
+            .find("td:eq(0)")
+            .html("<input name='edit_text' value='" + names + "'>");
+          $tr
+            .find("td:eq(1)")
+            .html("<input name='edit_email' value='" + email + "'>");
+          $tr
+            .find("td:eq(2)")
+            .html("<input name='edit_password' value='" + password + "'>");
+          $tr
+            .find("td:eq(3)")
+            .prepend("<button type='button' class='update'>Update</button>");
+        });
+
+        $("body").on("click", ".update", function () {
+          var $this = $(this);
+          var $tr = $this.closest("tr");
+          var id = $tr.attr("data-id");
+          var names = $tr.find("input[name='edit_text']").val();
+          var email = $tr.find("input[name='edit_email']").val();
+          var password = $tr.find("input[name='edit_password']").val();
+          $.ajax({
+            url: "api.php",
+            method: "PUT",
+            data: {
+              id: id,
+              names: names,
+              email: email,
+              password: password,
+            },
+            success: function (response) {
+              console.log(response);
+              $tr.find("td:eq(0)").text(names);
+              $tr.find("td:eq(1)").text(email);
+              $tr.find("td:eq(2)").text(password);
+              $tr.attr("data-names", names);
+              $tr.attr("data-email", email);
+              $tr.attr("data-password", password);
+              $this.remove();
+            },
+          });
+        });
+      });
+      function searchUsers(query) {
+        $(".table tbody tr")
+          .hide()
+          .filter(function () {
+            return (
+              $(this).text().toLowerCase().indexOf(query.toLowerCase()) > -1
+            );
+          })
+          .show();
+      }
+      $("#searchInput").on("input", function () {
+        var query = $(this).val();
+        searchUsers(query);
+      });
+
+      function paginateUsers(pageNumber, pageSize) {
+        var startIndex = (pageNumber - 1) * pageSize;
+        var endIndex = startIndex + pageSize;
+
+        $(".table tbody tr").hide().slice(startIndex, endIndex).show();
+      }
+
+      var pageSize = 5;
+      var currentPage = 1;
+
+      function updatePaginationControls() {
+        var totalRecords = $(".table tbody tr").length;
+        var totalPages = Math.ceil(totalRecords / pageSize);
+
+        var paginationControls = "";
+        for (var i = 1; i <= totalPages; i++) {
+          paginationControls += `<button class="paginationButton" data-page="${i}">${i}</button>`;
+        }
+
+        $("#paginationControls").html(paginationControls);
+
+        $(".paginationButton").click(function () {
+          currentPage = parseInt($(this).data("page"));
+          paginateUsers(currentPage, pageSize);
+        });
+
+        paginateUsers(currentPage, pageSize);
+      }
+
+      updatePaginationControls(5);
+    </script>
+  </body>
+</html>

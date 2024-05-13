@@ -1,0 +1,24 @@
+* {
+  background-color: skyblue;
+  background-position: center;
+  background-size: cover;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+h3 {
+  color: purple;
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-shadow: 3rem;
+  font-weight: bold;
+}
+
+p img {
+  position: relative;
+
+  flex: 1 1 41rem;
+
+  width: 50%;
+}

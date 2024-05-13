@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      form {
+        margin-left: 40%;
+        border-radius: 5px;
+        border: 1px solid blue;
+        justify-content: center;
+        width: 300px;
+        background-color: antiquewhite;
+      }
+      input {
+        display: block;
+        margin-bottom: 20px;
+      }
+      input:not(input[type="button"]) {
+        border: none;
+        border-bottom: 2px solid blue;
+      }
+
+      input:focus {
+        outline: 0;
+      }
+    </style>
+    <body>
+      <h1>Responsive Form</h1>
+
+      <form>
+        <label for="firstname">First name</label>
+        <input type="text" name="" id="firstname" />
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <label for="age">Age</label>
+        <input type="number" name="email" id="age" />
+        <label for="marks">Marks</label>
+        <input type="range" name="marks" id="marks" />
+        <input type="button" value="submit" />
+      </form>
+    </body>
+  </head>
+</html>

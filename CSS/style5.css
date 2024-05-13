@@ -1,0 +1,59 @@
+body {
+  background: url(../webapp/faisal.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+h3 {
+  text-align: center;
+  padding-top: 15px;
+}
+form {
+  width: 300px;
+  margin-left: 20px;
+}
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+  gap: 25px;
+}
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 100px;
+  outline: none;
+}
+input[type="radio"] {
+  padding: 9px;
+  width: 20px;
+}
+button[type="Submit"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+button[type="reset"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+.care {
+  font-size: small;
+}
+.care ul li {
+  margin-left: 6px;
+  padding-bottom: 10px;
+  font-weight: 100;
+  gap: 20px;
+}

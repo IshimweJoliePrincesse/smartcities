@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style7.css" />
+  </head>
+  <body>
+    <form action="agriculture.php" method="POST">
+      <div class="agriculture">
+        <h3>Agriculture Machinery Order Form</h3>
+
+        <label> Customer name:</label>
+        <br />
+        <input type="text" placeholder="first" id="first" />
+        <br />
+        <br />
+        <input type="text" placeholder="last" id="last" />
+        <br />
+        <br />
+        <label> Customer email:</label>
+        <br />
+        <input type="email" placeholder="" id="email" />
+        <br />
+        <br />
+
+        <label> Phone number:</label>
+        <br />
+        <input type="tel" placeholder="### ### ####" id="phone" />
+        <br />
+        <br />
+        <label> What type of machinery do you want to order?</label>
+        <br />
+        <ul>
+          <li><input type="checkbox" /> Cultipacker</li>
+          <li><input type="checkbox" /> Plow</li>
+          <li><input type="checkbox" /> Strip till</li>
+          <li><input type="checkbox" /> Cultivator</li>
+          <li><input type="checkbox" /> Roller</li>
+          <li><input type="checkbox" /> Subsoiler</li>
+          <li><input type="checkbox" /> Harrow</li>
+          <li><input type="checkbox" /> Debris removal</li>
+          <li><input type="checkbox" /> Planter</li>
+        </ul>
+
+        <label>Delivery address:</label>
+        <br />
+        <input type="text" id="address" placeholder="street Address" />
+        <br />
+        <br />
+        <input type="text" id="address1" placeholder="street Address Line 2" />
+        <br />
+        <br />
+        <input type="text" id="city" placeholder="city" />
+        <br />
+        <br />
+        <input type="text" id="state" placeholder="state" />
+        <br />
+        <br />
+        <input type="text" id="code" placeholder="zip code" />
+        <br />
+        <br />
+        <input type="text" id="country" placeholder="country" />
+        <br />
+        <label>Date:</label>
+        <br />
+        <input type="date" id="date" placeholder="street Address" />
+        <br />
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </body>
+</html>

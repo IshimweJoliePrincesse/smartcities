@@ -1,0 +1,59 @@
+body {
+  background: url(../webapp/mange.jpeg);
+  background-position: center;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+h3 {
+  text-align: center;
+}
+.city {
+  width: 620px;
+  height: 1000px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+form {
+  width: 500px;
+  margin-left: 15px;
+}
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+form input {
+  width: 90%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  margin-left: 20px;
+}
+
+button[type="submit"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+button[type="reset"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}

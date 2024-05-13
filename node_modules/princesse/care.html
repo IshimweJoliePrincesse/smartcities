@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style5.css" />
+  </head>
+  <body>
+    <form action="care.php" method="POST">
+        <div class="care">
+      <h3>Medical Assistant Registration Form</h3>
+      <label for="Full name">Full name:</label>
+      <br />
+
+      <input type="text" placeholder="First" id="first" />
+      <input type="text" placeholder="last" id="last" />
+      <br />
+      <label for="contact email">Contact email:</label>
+      <br />
+      <input type="email" id="email" />
+      <br />
+      <label for="contact phone">Contact phone:</label>
+      <br />
+      <input type="tel" id="phone" placeholder="### ### ###" />
+      <br />
+      <label>Do you have any medical assistant experience?</label>
+      <sub>(please mention your position)</sub>
+      <br />
+      <textarea placeholder="input your text here"></textarea>
+      <br />
+      <label>Your experience in years:</label>
+      <br />
+      <textarea placeholder="input your text here"></textarea>
+      <br />
+      <p>Please select an  option:</p>
+      <ul>
+      <li><input type="radio" name="radio" >Medical assistant certifed or interim</input></li>
+      <li><input type="radio" name="radio" >Medical assistant hemodialysis techinician certification</input></li>
+      <li><input type="radio" name="radio" >Medical assistant hemodialysis techinician certification</input></li>
+      <li><input type="radio"name="radio" >Medical assistant phlebotomist certification</input></li>
+      <li><input type="radio"name="radio" >Medical assistant registered</input></li>
+      </ul>
+      <label>Please list your education and traning:</label>
+      <br />
+      <textarea placeholder="input your text here"></textarea>
+      <br>
+      <button type="submit">Submit</button>
+      <button type="reset" >Reset</button>
+        </div>
+    </form>
+    
+  </body>
+</html>

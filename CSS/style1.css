@@ -1,0 +1,155 @@
+body {
+  background-color: skyblue;
+  font-family: "Poppins", sans-serif;
+}
+.register-box {
+  width: 360px;
+  height: 620px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+.login-box {
+  width: 360px;
+  height: 280px;
+  margin: auto;
+  background-color: white;
+  border-radius: 3px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 15px;
+}
+h4 {
+  text-align: center;
+}
+
+form {
+  width: 300px;
+  margin-left: 20px;
+}
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+button[type="reset"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 15px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid aquamarine;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: aqua;
+  color: black;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: skyblue;
+}
+
+.delete {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+
+  border: none;
+  background-color: #49c1a2;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.edit {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  border: none;
+  background-color: purple;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.update {
+  width: 100px;
+
+  height: 30px;
+
+  margin-top: 10px;
+  border: none;
+  background-color: navy;
+  color: black;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+#searchInput {
+  border-radius: 1.5rem;
+  color: black;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  box-sizing: border-box;
+  background-color: white;
+
+  border-top: 1 px solid wheat;
+  border-bottom: 2px solid wheat;
+  padding: 1rem, 1rem, 1rem, 1 rem;
+}
+
+input:focus {
+  outline: 0;
+}
+#paginationControls {
+  font-size: larger;
+  color: white;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#paginationControls input[type="checkbox"]:active + label {
+  color: black;
+  background-color: aqua;
+}

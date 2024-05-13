@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style1.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1>Login</h1>
+      <form id="addForm" action="api1.php" method="post" autocomplete="off">
+        <label for="Email">Email</label>
+        <input type="email" id="email" placeholder="" />
+        <label for="Password">Password</label>
+        <input type="password" id="password" placeholder="" />
+        <button type="submit" onclick="addClient()">Add Client</button>
+      </form>
+      <div id="clientList"></div>
+      <script src="script2.js"></script>
+    </div>
+    <p class="para-2">
+      Do not have an account?<a href="signup.html">Sign Up Here</a>
+    </p>
+  </body>
+</html>

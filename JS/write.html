@@ -1,0 +1,31 @@
+<html>
+<head>
+ <title>Learning 
+ <script>
+ function learnDOM(){
+ var classA = document
+ .childNodes[0]//html
+ .childNodes[1]//body
+ .childNodes[0]//div
+ .childNodes[3]
+ 
+ // console.log("Out put:"+classA.innerHTML)
+ document.write("Out put nodeName:"+classA.nodeName)
+ document.writeln("Out put nodeName parent:"+classA.parentNode.nodeName)
+ //type
+ document.write("Out put nodetype:"+classA.nodeType)
+ document.write("Out put nodeName text:"+classA.childNodes[0].nodeType)
+ document.write("Out put nodetype parent:"+classA.parentNode.nodeType)
+ document.write("Out put nodetyp html:"+document.childNodes[0].nodeType)
+}
+ </script>
+</head>
+<body>
+ <div class="default-styles" id="learnAttr">
+ <h3>List</h3>
+ <p>Class C</p>
+ <p>Class B</p>
+ <p>Class A</p>
+ </div><button type="button" onclick="learnDOM()">Learn DOM</button>
+</body>
+ 

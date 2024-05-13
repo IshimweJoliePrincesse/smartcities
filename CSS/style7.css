@@ -1,0 +1,61 @@
+body {
+  background-image: url(../webapp/farm.jpg);
+  /* background-position: center; */
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+}
+form {
+  background-color: white;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 5px rgb(66, 63, 63);
+}
+
+h3 {
+  /* text-align: center; */
+  padding-top: 15px;
+}
+
+form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+form input {
+  width: 30%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 100px;
+  outline: none;
+}
+button[type="Submit"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+button[type="reset"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  background-color: #49c1a2;
+  color: white;
+  font-size: 18px;
+}
+/* input[type="checkbox"] {
+  display: inline-flex;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+} */
+input [type="text"] {
+  font-weight: bolder;
+}
+.agriculture {
+  padding: 30px;
+}
